@@ -1,0 +1,256 @@
+/* 公共样式表 */
+
+
+/* 顶部导航条容器 */
+.topbar-wrapper{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: #333;
+    line-height: 40px;
+    color: #b0b0b0;
+}
+
+.topbar {
+    height: 40px;
+}
+/* 内部容器 */
+.topbar a{
+    font-size: 12px;
+    display: inline-block;
+    
+}
+
+.topbar span {
+    color:#424242;
+    margin:0.3em;
+}
+
+/* 左侧导航 */
+.topbar-nav{
+    float: left;
+    position: relative;
+}
+
+/* 下载APP */
+.download {
+    position: relative;
+}
+
+/* 弹出盒的三角 */
+.download::before{
+    content: " ";
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -4px;
+    width: 0;
+    height: 0;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+
+/* 弹出盒 */
+.qrcode {
+    /* display: none; */
+    /* 绝对定位 */
+    position: absolute;
+    /* 距离浏览器顶部的距离 */
+    top: 40px;
+    /* 水平居中 */
+    left: 50%;
+    margin-left: -62px;
+    /* 弹出盒大小 */
+    width: 124px;
+    /* height: 148px; */
+    height: 0;
+    /* 溢出隐藏 */
+    overflow: hidden;
+    /* 清除继承自父元素的行高 */
+    line-height: 1;
+    /* 设置文字水平居中 */
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+    background-color: #fff;
+    box-shadow: 0 1px 5px #aaa;
+    /* 过渡 */
+    transition: height .3s;
+    z-index: 30;
+    
+}
+
+/* 二维码图片居中 */
+.qrcode img {
+    display: block;
+    margin:14px auto;
+}
+
+/* 鼠标经过下载app时，弹出盒和三角显示 */
+.download:hover .qrcode,
+.download:hover::before {
+    display: block;
+    height: 148px;
+}
+
+
+/* 购物车 */
+.shopping-car {
+    position: relative;
+    float: right;
+    width: 120px;
+    height: 40px;
+    background:#424242;
+    text-align: center;
+    margin-left: 25px;
+}
+
+/* 购物车图标 */
+.shopping-car a::before{
+    content: "";
+    font-family:'icomoon';
+    margin-right:2px;
+}
+
+/* 购物车下拉菜单 */
+.car-menu {
+    /* display: none; */
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 316px;
+    height: 0;
+    overflow: hidden;
+    line-height: 100px;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    box-shadow: 0 1px 5px #aaa;
+    transition: height .3s;
+    z-index: 30;
+}
+/* 购物车变成橙色 */
+.shopping-car:hover a{
+    color: #ff6700;
+}
+/* 背景变成白色 */
+.shopping-car:hover{
+    background-color: #fff;
+}
+/* 购物车的弹出盒显示 */
+.shopping-car:hover .car-menu {
+    display: block;
+    height: 100px;
+}
+
+/* 登录注册 */
+.user {
+    float: right;
+}
+
+
+/* 导航 */
+/* 导航外部容器 */
+.header-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    /* background-color: black; */
+}
+/* 导航内部容器 */
+.header {
+    position: relative;
+    height: 100%;
+    /* background-color: red; */
+}
+/* logo */
+.logo {
+    position:absolute;
+    left:0;
+    top: 22px;
+    width: 56px;
+    height: 56px;
+    background-color:transparent;
+}
+.logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background:url(../img/logo-mi2.png) no-repeat;
+    background-size: 56px;
+}
+
+/* 中间导航 */
+.nav {
+    position: absolute;
+    float: left;
+    left:56px;
+    width: 850px;
+    height: 100%;
+    /* background-color:green; */
+}
+
+.nav-list {
+    /* position: relative; */
+    padding:12px 0px 0 55px;
+    font-size:16px;
+}
+
+.nav-list li a{
+    float: left;
+    display: block;
+    color:#333;
+    padding: 26px 10px 38px;
+
+}
+
+.nav-category {
+    visibility: hidden;
+}
+
+/* 鼠标经过导航 */
+.nav-list li:hover a{
+    color:#ff6700;
+} 
+
+
+
+/* 搜索栏 */
+.search {
+    position: relative;
+    float: right;
+    right:0;
+    width: 320px;
+    height: 100%;
+    /* background-color:tomato; */
+}
+
+
+.search input {
+    position: absolute;
+    top: 25px;
+    padding:0 10px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    outline: none;
+    
+}
+
+.search input[type=search]{ 
+    right: 49px;
+    width: 245px;
+    height: 50px;
+    
+}
+.search input[type=submit]{
+    right:0;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-family:'icomoon' ;
+    font-size: 18px;
+    color:#616161
+}
+

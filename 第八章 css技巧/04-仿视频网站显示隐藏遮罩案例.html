@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>仿视频网站显示隐藏遮罩案例</title>
+    <style>
+        .shipin {
+            position: relative;
+            width: 444px;
+            height: 320px;
+            background-color: pink;
+            margin: 30px auto;
+        }
+
+        .shipin img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .mask {
+            /* 隐藏遮罩层 */
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .4) url(img/arr.png) no-repeat center;
+        }
+
+        /* 当我们鼠标经过了这个盒子，就让里面遮罩层显示出来 */
+        .shipin:hover .mask {
+            /* 而是显示元素 */
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shipin">
+        <div class="mask"></div>
+        <img src="img/zshz.webp" alt="">
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>固定在版心右侧</title>
+    <style>
+        .box {
+            width: 800px;
+            height: 1600px;
+            background-color: aquamarine;
+            margin: 0 auto;
+        }
+
+        .fyyq {
+            position: fixed;
+            /* 1.走浏览器宽度的一半 */
+            right: 50%;
+            /* 2。利用margin走版心盒子宽度的一半 */
+            margin-right: 400px;
+            top: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="fyyq">
+        <img src="./img/fyyq.png" alt="">
+    </div>
+    <div class="box">
+        版心
+    </div>
+</body>
+</html>

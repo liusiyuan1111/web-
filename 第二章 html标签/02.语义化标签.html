@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02.语义化标签</title>
+    <style>
+        div{
+            font-size:0;
+            border: 1px solid #000;
+        }
+        span{
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        在网页中HTML专门用来负责网页的结构
+            所以在使用html标签时，应该关注的是标签的语义，而不是它的样式
+
+            标题标签：
+                h1 ~ h6 一共有六级标题
+                从h1~h6重要性递减，h1最重要，h6最不重要
+                h1在网页中的重要性仅次于title标签，一般情况下一个页面中只会有一个h1
+                一般情况下标题标签只会使用到h1~h3，h4~h6很少用
+
+                标题标签都是块元素
+
+        
+        块元素（block element）：div,标题标签,列表,p,table,menu...
+            - 在页面中独占一行的元素
+            - 在网页中一般通过块元素来对页面进行布局
+            - 块元素中可以放行内元素和其他块元素
+            - 支持全部的样式
+        行内元素（inline element）：img,input,span,a,br,em,strong...
+            - 行内元素主要用来包裹文字或者其他行内元素
+            - 支持部分样式（不支持宽、高、margin上下、padding上下）
+
+
+        注意：
+        - 一般情况下会在块元素中放行内元素，而不会在行内元素中放块元素
+        - p元素中不能放任何的块元素
+
+        浏览器在解析网页时，会自动对网页中不符合规范的内容进行修正
+            比如：
+                标签写在了根元素的外部
+                p元素中嵌套了块元素
+                根元素中出现了除head和body以外的子元素
+                ... ...
+     -->
+     <h1>一级标题</h1>
+     <h2>二级标题</h2>
+     <h3>三级标题</h3>
+     <h4>四级标题</h4>
+     <h5>五级标题</h5>
+     <h6>六级标题</h6>
+
+    <p>
+        <h1>哈哈</h1>
+    </p>
+
+
+    <!-- 去掉行内元素的间隙
+        - 去掉换行
+        - 父容器font-size设为0，行内元素的font-size设为一个正整数    
+    -->
+    <div>
+        <span>我是一个行内元素</span>
+        <span>我是一个行内元素</span>
+        <span>我是一个行内元素</span>
+    </div>
+
+
+    <!-- 
+        布局标签（结构化语义标签）
+            - 方便浏览器处理和识别，提升了网页的质量和语义。
+            - 减少了大量无意义的div标签，增强代码的可读性。
+     -->
+
+     <!-- 
+        header 表示网页的头部
+        main 表示网页的主体部分(一个页面中只会有一个main)
+        footer 表示网页的底部
+        nav 表示网页中的导航
+        aside 和主体相关的其他内容（侧边栏）
+        article 表示一个独立的文章
+        section 表示一个独立的区块，上边的标签都不能表示时使用section
+
+        div 没有语义，就用来表示一个区块，目前来讲div还是我们主要的布局元素
+        span 行内元素，没有任何的语义，一般用于在网页中选中文字
+
+      -->
+    <header>...</header>
+    <nav>...</nav>
+    <main>
+        <article>
+            <section>...</section>
+        </article>
+        <aside>...</aside>
+    </main>
+    <footer>...</footer>
+
+</body>
+</html>
+
+<h1>我就要写在html标签的外部！</h1>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器的权重</title>
+    <style>
+        .test {
+            color: red;
+        }
+
+        div {
+            color: pink !important;
+        }
+
+        #demo {
+            color: green;
+        }
+        /* important>行内>id>类或伪类>元素>继承或* */
+        .father {
+            color: pink !important;
+        }
+
+        p {
+            color: red;
+        }
+        /* 继承的权重为0 */
+
+       /* ul li 权重  0,0,0,1 + 0,0,0,1  =  0,0,0,2     2 */
+       ul li {
+            color: green;
+        }
+        /* li 的权重是 0,0,0,1    1 */
+        li {
+            color: red;
+        }
+        /* .nav li  权重    0,0,1,0  +  0,0,0,1  =  0,0,1,1    11 */
+        .nav li {
+            color: pink;
+        }
+        /* 复合选择器会有权重叠加的问题 */
+       /* 权重虽然会叠加,但是永远不会有进位 */
+    </style>
+</head>
+
+<body>
+    <div class="test" id="demo" style="color: purple">哈哈哈哈</div>
+
+    <div class="father">
+        <p>呵呵呵</p>
+    </div>
+
+    <ul class="nav">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+
+</html>
