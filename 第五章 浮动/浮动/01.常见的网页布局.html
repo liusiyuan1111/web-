@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常见的网页布局</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .top{
+            height: 100px;
+            background-color: gray;
+            margin: 10px;
+        }
+        .banner {
+            width: 980px;
+            height: 150px;
+            background-color: gray;
+            margin: 10px auto;
+        }
+        .main {
+            width: 980px;
+            height: 200px;
+            background-color: gray;
+            margin: 10px auto;
+        }
+        .footer {
+            height: 100px;
+            background-color: gray;
+            margin: 10px;
+        }
+        .main .left {
+            width: 300px;
+            height: 200px;
+            background-color: aquamarine;
+            float: left;
+        }
+
+        .main .right {
+            width: 400px;
+            height: 200px;
+            background-color: black;
+            float: right;
+        }
+
+        .banner .box li {
+            width: 237px;
+            height: 150px;
+            background-color: brown;
+            float:left;
+            margin-right: 10px;
+        }
+
+        .banner .box .last{
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">top</div>
+    <div class="banner">
+        <ul class="box">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li class="last">4</li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="left">left</div>
+        <div class="right">right</div>
+    </div>
+    <div class="footer">footer</div>
+</body>
+</html>
