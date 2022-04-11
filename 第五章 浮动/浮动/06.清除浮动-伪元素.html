@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,14 +26,16 @@
             height: 250px;
             background-color: blue;
         }
+
         .footer {
             height: 200px;
             background-color: chocolate;
         }
-/* 伪类元素 :hover
+
+        /* 伪类元素 :hover
     伪元素  :after
  */
-        .clearfix::after {  
+        .clearfix::after {
             content: "";
             clear: both;
             display: block;
@@ -46,6 +49,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="box clearfix">
         <div class="box1">1</div>
@@ -53,4 +57,5 @@
     </div>
     <div class="footer"></div>
 </body>
+
 </html>
